@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36" version="29.6.0">
   <diagram name="หน้า-1" id="DvGJoWYHiQfKgMJOL4nB">
-    <mxGraphModel dx="1736" dy="954" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1519" dy="835" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -31,8 +31,8 @@
         <mxCell id="l7h-IdOtmE2TRLUO0GMj-13" edge="1" parent="1" source="l7h-IdOtmE2TRLUO0GMj-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" target="l7h-IdOtmE2TRLUO0GMj-7">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="670" y="517" />
-              <mxPoint x="670" y="357" />
+              <mxPoint x="670" y="518" />
+              <mxPoint x="670" y="358" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -69,8 +69,12 @@
         <mxCell id="l7h-IdOtmE2TRLUO0GMj-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;div&gt;Job Satisfaction&lt;/div&gt;" vertex="1">
           <mxGeometry height="90" width="170" x="740" y="290" as="geometry" />
         </mxCell>
-        <mxCell id="l7h-IdOtmE2TRLUO0GMj-25" edge="1" parent="1" source="l7h-IdOtmE2TRLUO0GMj-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" target="l7h-IdOtmE2TRLUO0GMj-9">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="l7h-IdOtmE2TRLUO0GMj-25" edge="1" parent="1" source="l7h-IdOtmE2TRLUO0GMj-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="l7h-IdOtmE2TRLUO0GMj-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1135" y="555" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="l7h-IdOtmE2TRLUO0GMj-26" connectable="0" parent="l7h-IdOtmE2TRLUO0GMj-25" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="H6 (-)" vertex="1">
           <mxGeometry relative="1" x="-0.3246" y="5" as="geometry">
@@ -87,7 +91,7 @@
           <mxGeometry height="90" width="250" x="620" y="190" as="geometry" />
         </mxCell>
         <mxCell id="l7h-IdOtmE2TRLUO0GMj-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="H2: เรื่อง Person-Job Fit มีผลเชิงบวกต่อ&lt;br&gt;ความพึงพอใจในงาน&amp;nbsp;&lt;br&gt;เช่น ถ้าคนมีได้ทำงานตรงสาย มี Role ที่ชัดเจน&amp;nbsp;&lt;div&gt;ส่งผลให้คนพึงพอใจในงาน&lt;/div&gt;" vertex="1">
-          <mxGeometry height="90" width="250" x="680" y="400" as="geometry" />
+          <mxGeometry height="90" width="250" x="690" y="390" as="geometry" />
         </mxCell>
         <mxCell id="l7h-IdOtmE2TRLUO0GMj-18" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="H3 : เรื่อง Person-Job Fit มีผลเชิงบวกต่อ&lt;br&gt;OC&lt;br&gt;เช่น ถ้าคนทำงานตรงสาย ก็จะรู้สึกเป็นส่วนหนึ่งในงาน และมีความผูกพันต่อองค์กร" vertex="1">
           <mxGeometry height="90" width="250" x="660" y="610" as="geometry" />

@@ -1,0 +1,107 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36" version="29.6.0">
+  <diagram name="หน้า-1" id="DvGJoWYHiQfKgMJOL4nB">
+    <mxGraphModel dx="2430" dy="1336" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="l7h-IdOtmE2TRLUO0GMj-10" edge="1" parent="1" source="l7h-IdOtmE2TRLUO0GMj-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="l7h-IdOtmE2TRLUO0GMj-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l7h-IdOtmE2TRLUO0GMj-11" connectable="0" parent="l7h-IdOtmE2TRLUO0GMj-10" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="H1&lt;br&gt;(+)&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.4042" y="-8" as="geometry">
+            <mxPoint x="22" y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l7h-IdOtmE2TRLUO0GMj-28" edge="1" parent="1" source="l7h-IdOtmE2TRLUO0GMj-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="l7h-IdOtmE2TRLUO0GMj-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="620" y="373" />
+              <mxPoint x="620" y="533" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l7h-IdOtmE2TRLUO0GMj-29" connectable="0" parent="l7h-IdOtmE2TRLUO0GMj-28" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="H4 (+)" vertex="1">
+          <mxGeometry relative="1" x="0.6812" as="geometry">
+            <mxPoint x="-69" y="-88" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l7h-IdOtmE2TRLUO0GMj-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- Career Growth&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;- Compensation&lt;/div&gt;&lt;div&gt;- Training&lt;/div&gt;&lt;div&gt;Management Support&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="270" x="310" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="l7h-IdOtmE2TRLUO0GMj-13" edge="1" parent="1" source="l7h-IdOtmE2TRLUO0GMj-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" target="l7h-IdOtmE2TRLUO0GMj-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="670" y="517" />
+              <mxPoint x="670" y="357" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l7h-IdOtmE2TRLUO0GMj-14" connectable="0" parent="l7h-IdOtmE2TRLUO0GMj-13" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="H2 (+)" vertex="1">
+          <mxGeometry relative="1" x="-0.0404" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l7h-IdOtmE2TRLUO0GMj-16" edge="1" parent="1" source="l7h-IdOtmE2TRLUO0GMj-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="l7h-IdOtmE2TRLUO0GMj-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l7h-IdOtmE2TRLUO0GMj-17" connectable="0" parent="l7h-IdOtmE2TRLUO0GMj-16" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="H3 (+)" vertex="1">
+          <mxGeometry relative="1" x="-0.2708" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l7h-IdOtmE2TRLUO0GMj-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;div&gt;Skill Match&lt;/div&gt;&lt;div&gt;Role Clarity&lt;/div&gt;&lt;div&gt;Major Match&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="270" x="310" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="l7h-IdOtmE2TRLUO0GMj-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rotation=-90;" value="HR Practices" vertex="1">
+          <mxGeometry height="60" width="120" x="190" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="l7h-IdOtmE2TRLUO0GMj-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rotation=-90;" value="Person-Job Fit" vertex="1">
+          <mxGeometry height="60" width="120" x="190" y="525" as="geometry" />
+        </mxCell>
+        <mxCell id="l7h-IdOtmE2TRLUO0GMj-22" edge="1" parent="1" source="l7h-IdOtmE2TRLUO0GMj-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="l7h-IdOtmE2TRLUO0GMj-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l7h-IdOtmE2TRLUO0GMj-23" connectable="0" parent="l7h-IdOtmE2TRLUO0GMj-22" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="H5 (-)" vertex="1">
+          <mxGeometry relative="1" x="-0.1915" as="geometry">
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l7h-IdOtmE2TRLUO0GMj-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;div&gt;Job Satisfaction&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="170" x="740" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="l7h-IdOtmE2TRLUO0GMj-25" edge="1" parent="1" source="l7h-IdOtmE2TRLUO0GMj-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" target="l7h-IdOtmE2TRLUO0GMj-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l7h-IdOtmE2TRLUO0GMj-26" connectable="0" parent="l7h-IdOtmE2TRLUO0GMj-25" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="H6 (-)" vertex="1">
+          <mxGeometry relative="1" x="-0.3246" y="5" as="geometry">
+            <mxPoint x="3" y="5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l7h-IdOtmE2TRLUO0GMj-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;div&gt;Organizational&lt;br&gt;Commitment&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="170" x="740" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="l7h-IdOtmE2TRLUO0GMj-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;div&gt;Turnover Intention&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="170" x="1050" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="l7h-IdOtmE2TRLUO0GMj-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="H1 : เรื่อง Hr practice มีผลเชิงบวกต่อ&lt;br&gt;ความพึงพอใจในงาน&amp;nbsp;&lt;br&gt;เช่น การมีความเติบโต โดยได้รับการสนับสนุนจากองค์กร ทำให้คนพึงพอใจในงานมากขึ้น" vertex="1">
+          <mxGeometry height="90" width="250" x="620" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="l7h-IdOtmE2TRLUO0GMj-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="H2: เรื่อง Person-Job Fit มีผลเชิงบวกต่อ&lt;br&gt;ความพึงพอใจในงาน&amp;nbsp;&lt;br&gt;เช่น ถ้าคนมีได้ทำงานตรงสาย มี Role ที่ชัดเจน&amp;nbsp;&lt;div&gt;ส่งผลให้คนพึงพอใจในงาน&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="250" x="680" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="l7h-IdOtmE2TRLUO0GMj-18" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="H3 : เรื่อง Person-Job Fit มีผลเชิงบวกต่อ&lt;br&gt;OC&lt;br&gt;เช่น ถ้าคนทำงานตรงสาย ก็จะรู้สึกเป็นส่วนหนึ่งในงาน และมีความผูกพันต่อองค์กร" vertex="1">
+          <mxGeometry height="90" width="250" x="660" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="l7h-IdOtmE2TRLUO0GMj-24" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="H5 : ถ้าคนพึงพอใจในงานมาก จะทำให้ TI ลดลง&amp;nbsp;" vertex="1">
+          <mxGeometry height="90" width="250" x="1040" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="l7h-IdOtmE2TRLUO0GMj-27" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="H6 : ถ้าคนมีความผูกพันต่อองค์กร&lt;div&gt;&amp;nbsp;จะทำให้ TI ลดลง&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="170" x="930" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="l7h-IdOtmE2TRLUO0GMj-30" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="H4 : เรื่อง HR Practice มีผลเชิงบวกต่อ OC&amp;nbsp;&lt;br&gt;เช่น การได้รับการสนับสนุนจากองค์กร ทำให้คนรู้สึกผูกพันต่อองค์กร" vertex="1">
+          <mxGeometry height="90" width="350" x="260" y="400" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

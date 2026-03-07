@@ -10,8 +10,9 @@ model = joblib.load("rf-model/turnover_model_with_mock.pkl")
 EXPECTED_FEATURES = int(getattr(model, "n_features_in_", 0))
 MODEL_FEATURE_NAMES = [str(name) for name in getattr(model, "feature_names_in_", [])]
 BASE_DIR = Path(__file__).resolve().parent
-MOCKUP_HTML = BASE_DIR / "mockup" / "index.html"
-RECOMMENDATION_HTML = BASE_DIR / "mockup" / "recommendation.html"
+WEB_DIR = BASE_DIR.parent / "web"
+MOCKUP_HTML = WEB_DIR / "index.html"
+RECOMMENDATION_HTML = WEB_DIR / "recommendation.html"
 
 
 def to_camel_case(name: str) -> str:

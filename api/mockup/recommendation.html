@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Risk Recommendation</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --ink: #0f172a;
+      --muted: #475569;
+      --low: #15803d;
+      --medium: #b45309;
+      --high: #b91c1c;
+      --line: #dbe3ef;
+      --card: #ffffff;
+      --shadow: 0 12px 26px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      background: radial-gradient(circle at 15% -10%, #e0f2fe 0%, transparent 30%),
+                  radial-gradient(circle at 90% 110%, #fde68a 0%, transparent 35%),
+                  var(--bg);
+      color: var(--ink);
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    .wrap {
+      width: min(980px, 100%);
+      margin: 0 auto;
+      display: grid;
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+
+    .title {
+      margin: 0;
+      font-size: clamp(1.3rem, 2.8vw, 2rem);
+    }
+
+    .meta {
+      margin-top: 8px;
+      color: var(--muted);
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .pill {
+      border-radius: 999px;
+      color: white;
+      font-weight: 700;
+      padding: 5px 10px;
+      font-size: 0.86rem;
+      background: #64748b;
+    }
+
+    .score {
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: 0.2px;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .recGrid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .recItem {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px;
+      background: #fcfdff;
+    }
+
+    .recItem h3 {
+      margin: 0 0 6px;
+      font-size: 1rem;
+    }
+
+    .recItem p {
+      margin: 0;
+      color: #334155;
+      line-height: 1.45;
+      font-size: 0.92rem;
+    }
+
+    .riskList {
+      margin: 0;
+      padding-left: 18px;
+      color: #334155;
+      line-height: 1.5;
+    }
+
+    .nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 999px;
+      padding: 10px 14px;
+      border: 1px solid #cbd5e1;
+      font-weight: 700;
+      color: #0f172a;
+      background: #fff;
+    }
+
+    .btn.primary {
+      color: #fff;
+      background: #0f766e;
+      border-color: #0f766e;
+    }
+
+    @media (max-width: 760px) {
+      .recGrid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="card">
+      <h1 class="title">Recommendation Dashboard</h1>
+      <p class="subtitle">คำแนะนำเชิงปฏิบัติจากระดับความเสี่ยงที่โมเดลประเมินล่าสุด</p>
+      <div class="meta">
+        <span id="riskPill" class="pill">Unknown</span>
+        <span id="riskScore" class="score">Score: -</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 style="margin-top: 0;">Priority Actions (Next 30 Days)</h2>
+      <div id="recGrid" class="recGrid"></div>
+    </section>
+
+    <section class="card">
+      <h2 style="margin-top: 0;">Factors To Watch</h2>
+      <p class="subtitle">3 ปัจจัยที่ได้คะแนนต่ำสุดจาก input ล่าสุด</p>
+      <ul id="riskList" class="riskList"></ul>
+    </section>
+
+    <section class="card nav">
+      <a class="btn primary" href="/ui">Back to Risk Dashboard</a>
+      <a class="btn" href="/docs" target="_blank" rel="noreferrer">Open API Docs</a>
+    </section>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const fallbackResult = JSON.parse(localStorage.getItem("turnover:lastResult") || "{}");
+    const fallbackPayload = JSON.parse(localStorage.getItem("turnover:lastPayload") || "{}");
+
+    const score = Number(params.get("score") || fallbackResult.score || 0);
+    const level = (params.get("level") || fallbackResult.level || "Unknown").trim();
+
+    const riskPill = document.getElementById("riskPill");
+    const riskScore = document.getElementById("riskScore");
+    const recGrid = document.getElementById("recGrid");
+    const riskList = document.getElementById("riskList");
+
+    const labels = {
+      careerGrowth: "Career Growth",
+      jobSatisfaction: "Job Satisfaction",
+      organizationalCommitment: "Organizational Commitment",
+      compensation: "Compensation",
+      training: "Training",
+      managementSupport: "Management Support",
+      skillMatch: "Skill Match",
+      roleClarity: "Role Clarity",
+      majorMatch: "Major Match"
+    };
+
+    function pillColor(lv) {
+      if (lv === "Low") return "var(--low)";
+      if (lv === "Medium") return "var(--medium)";
+      if (lv === "High") return "var(--high)";
+      return "#64748b";
+    }
+
+    function recommendationByLevel(lv) {
+      if (lv === "High") {
+        return [
+          ["Retention Interview", "นัด 1:1 ภายใน 7 วันเพื่อคุย pain points และหาความต้องการเร่งด่วน"],
+          ["Manager Action Plan", "ให้หัวหน้าจัดแผนปรับงาน/ภาระงานแบบรายสัปดาห์ และติดตามผล 4 สัปดาห์"],
+          ["Compensation Review", "ทบทวนค่าตอบแทนและสิทธิประโยชน์เทียบ market band ในรอบถัดไปทันที"],
+          ["Growth Path", "กำหนด career milestone ที่วัดผลได้ใน 60-90 วัน และประกาศให้พนักงานเห็นภาพ"],
+        ];
+      }
+      if (lv === "Medium") {
+        return [
+          ["Early Check-in", "เช็คอินทุก 2 สัปดาห์กับหัวหน้า เพื่อเคลียร์เรื่องบทบาทและเป้าหมาย"],
+          ["Targeted Upskill", "ส่งเข้าอบรมเฉพาะทักษะที่ขาดและเชื่อมกับงานจริงทันที"],
+          ["Recognition Loop", "เพิ่ม feedback และ recognition รอบสั้น เพื่อเพิ่ม engagement"],
+          ["Workload Tuning", "ทบทวนภาระงานและลำดับความสำคัญ ลดงานที่ไม่สร้างคุณค่า"],
+        ];
+      }
+      return [
+        ["Maintain Momentum", "รักษาจังหวะ check-in รายเดือนและ feedback ที่ชัดเจน"],
+        ["Career Visibility", "ทำ growth conversation อย่างน้อยไตรมาสละ 1 ครั้ง"],
+        ["Skills Investment", "วางแผนพัฒนาทักษะต่อเนื่องเพื่อกันความเสี่ยงระยะยาว"],
+        ["Preventive Monitoring", "ติดตามตัวชี้วัดกลุ่มเสี่ยงล่วงหน้า เช่น ความพึงพอใจลดลงต่อเนื่อง"],
+      ];
+    }
+
+    function renderRecommendations() {
+      recGrid.innerHTML = "";
+      recommendationByLevel(level).forEach(([title, desc]) => {
+        const box = document.createElement("article");
+        box.className = "recItem";
+        box.innerHTML = `<h3>${title}</h3><p>${desc}</p>`;
+        recGrid.appendChild(box);
+      });
+    }
+
+    function renderLowFactors() {
+      const featureObj = (fallbackPayload && fallbackPayload.features) || {};
+      const sorted = Object.entries(featureObj)
+        .map(([k, v]) => ({ k, v: Number(v) }))
+        .filter((x) => Number.isFinite(x.v))
+        .sort((a, b) => a.v - b.v)
+        .slice(0, 3);
+
+      riskList.innerHTML = "";
+      if (!sorted.length) {
+        const li = document.createElement("li");
+        li.textContent = "ยังไม่มี payload ล่าสุดจากหน้า dashboard";
+        riskList.appendChild(li);
+        return;
+      }
+
+      sorted.forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = `${labels[item.k] || item.k}: ${item.v}/5`;
+        riskList.appendChild(li);
+      });
+    }
+
+    riskPill.textContent = level;
+    riskPill.style.background = pillColor(level);
+    riskScore.textContent = `Score: ${Number.isFinite(score) ? score.toFixed(3) : "-"}`;
+
+    renderRecommendations();
+    renderLowFactors();
+  </script>
+</body>
+</html>
